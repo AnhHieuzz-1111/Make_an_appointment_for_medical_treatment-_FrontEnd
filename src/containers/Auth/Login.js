@@ -34,12 +34,12 @@ class Login extends Component {
       let data = await handleLoginApi(this.state.username, this.state.password);
       if (data && data.errCode !== 0) {
         this.setState({
-          errMessage: data.message
-        })
+          errMessage: data.message,
+        });
       }
       if (data && data.errCode === 0) {
-        this.props.userLoginSuccess(data.user)
-        console.log('login succeed!')
+        this.props.userLoginSuccess(data.user);
+        console.log("login succeed!");
       }
     } catch (error) {
       if (error.response) {
@@ -62,7 +62,7 @@ class Login extends Component {
       <div className="login-background">
         <div className="login-container">
           <div className="login-content row">
-            <div className="col-12 text-login">Login</div>
+            <div className="col-12 text-login">Sign in</div>
             <div className="col-12 form-group login-input">
               <label>
                 <b>Username:</b>
@@ -146,7 +146,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     navigate: (path) => dispatch(push(path)),
     userLoginFail: () => dispatch(actions.userLoginFail()),
-    userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo))
+    userLoginSuccess: (userInfo) =>
+      dispatch(actions.userLoginSuccess(userInfo)),
   };
 };
 
