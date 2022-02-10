@@ -10,7 +10,6 @@
 
     .left-content {
       width: 25%;
-      border: 1px solid green;
       display: flex;
       align-items: center;
 
@@ -30,7 +29,6 @@
 
     .center-content {
       width: 50%;
-      border: 1px solid blue;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -45,7 +43,6 @@
 
     .right-content {
       width: 25%;
-      border: 1px solid black;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,6 +55,232 @@
           padding-left: 2px;
           color: #969495;
           font-weight: 550;
+        }
+      }
+    }
+  }
+}
+.home-header-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../assets/header-background.jpg");
+  height: 486px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+
+  .content-up {
+    padding-top: 15px;
+    border: 1px solid red;
+    height: 50%;
+    .first-title {
+      text-align: center;
+      font-size: 30px;
+      text-shadow: 1px 1px 1px #333;
+      margin: 30px 0 5px 0;
+      color: white;
+      font-weight: 300;
+    }
+    .second-title {
+      text-align: center;
+      font-size: 30px;
+      text-shadow: 1px 1px 1px #333;
+      color: white;
+      font-weight: 550;
+      margin-bottom: 15px;
+    }
+    .search {
+      display: flex;
+      border: 1px solid transparent;
+      width: fit-content;
+      margin: 0 auto;
+      align-items: center;
+      padding: 10px;
+      justify-content: center;
+      border-radius: 25px;
+      background: #f7d800;
+
+      i {
+        margin: 0 5px;
+      }
+
+      input {
+        height: 30px;
+        width: 360px;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .content-down {
+    border: 1px solid black;
+    height: 50%;
+    .option {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      .option-child {
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+
+        .speciality {
+          width: 125px;
+          border: 1px solid red;
+          cursor: pointer;
+          &:hover {
+            color: #119db6;
+          }
+          .icon-speciality {
+            background: url("../../assets/hospital-banner.png");
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            margin: auto;
+          }
+          .text-speciality {
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+          }
+        }
+
+        .remote {
+          width: 125px;
+          border: 1px solid red;
+          cursor: pointer;
+          &:hover {
+            color: #119db6;
+          }
+          .icon-remote {
+            background: url("../../assets/remote-examine-banner.png");
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            margin: auto;
+          }
+          .text-remote {
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+          }
+        }
+
+        .general {
+          width: 125px;
+          border: 1px solid red;
+          cursor: pointer;
+          &:hover {
+            color: #119db6;
+          }
+          .icon-general {
+            background: url("../../assets/examine-general-banner.png");
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            margin: auto;
+          }
+          .text-general {
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+          }
+        }
+
+        .medical {
+          width: 125px;
+          border: 1px solid red;
+          cursor: pointer;
+          &:hover {
+            color: #119db6;
+          }
+          .icon-medical {
+            background: url("../../assets/medical-test-banner.png");
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            margin: auto;
+          }
+          .text-medical {
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+          }
+        }
+
+        .health {
+          width: 125px;
+          border: 1px solid red;
+          cursor: pointer;
+          &:hover {
+            color: #119db6;
+          }
+          .icon-health {
+            background: url("../../assets/mind-health-banner.png");
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            margin: auto;
+          }
+          .text-health {
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+          }
+        }
+
+        .dentistry {
+          width: 125px;
+          border: 1px solid red;
+          cursor: pointer;
+          &:hover {
+            color: #119db6;
+          }
+          .icon-dentistry {
+            background: url("../../assets/hospital-banner.png");
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            border-radius: 50%;
+            background-size: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            margin: auto;
+          }
+          .text-dentistry {
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+          }
         }
       }
     }
