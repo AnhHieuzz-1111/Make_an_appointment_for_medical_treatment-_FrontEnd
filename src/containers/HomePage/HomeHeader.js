@@ -4,8 +4,14 @@ import "./HomeHeader.scss";
 import logoVietnamese from "../../assets/images/vietnamese.svg";
 import logoEngland from "../../assets/images/england.svg";
 import { FormattedMessage } from 'react-intl';
+import {LANGUAGES} from "../../utils/constant";
+import { changeLanguageApp } from "../../store/actions/appActions";
 
 class HomeHeader extends Component {
+  changeLanguage = (language) => {
+    this.props.changeLanguageAppRedux(language)
+    //fire redux event: actions
+  }
   render() {
     return (
       <React.Fragment>
@@ -46,8 +52,8 @@ class HomeHeader extends Component {
                 <i className="fas fa-question-circle"></i>
                 <span><FormattedMessage id="homeheader.support"/></span>
               </div>
-              <div className="language-vi"><img src={logoVietnamese}/></div>
-              <div className="language-en"><img src={logoEngland}/></div>
+              <div className="language-vi"><img src={logoVietnamese} onClick={() => { this.changeLanguage(LANGUAGES.VI) }}/></div>
+              <div className="language-en"><img src={logoEngland} onClick={()=>{ this.changeLanguage(LANGUAGES.EN) }}/></div>
             </div>
           </div>
         </div>
@@ -104,7 +110,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    changeLanguageAppRedux: (language) => dispatch(changeLanguageApp(language))
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
