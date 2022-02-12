@@ -1,5 +1,5 @@
 .home-header-container {
-  height: 60px;
+  height: 70px;
   width: 100%;
   padding: 0 20px;
 
@@ -17,12 +17,13 @@
         font-size: 25px;
         color: gray;
         cursor: pointer;
+        margin-left: 52px;
       }
 
       .header-logo {
         background: url("../../assets/logo.svg") center center no-repeat;
-        height: 70%;
-        width: 70%;
+        height: 48%;
+        width: 56%;
         cursor: pointer;
       }
     }
@@ -34,9 +35,14 @@
       align-items: center;
 
       .child-content {
-        .subs-title {
-          font-weight: 100;
+        b {
+          display: block;
           font-size: 12px;
+        }
+        .subs-title {
+          font-weight: lighter;
+          font-size: 10px;
+          display: block;
         }
       }
     }
@@ -44,10 +50,11 @@
     .right-content {
       width: 25%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
 
       .support {
+        padding-right: 45px;
         i {
           color: #45c3d2;
         }
@@ -55,6 +62,23 @@
           padding-left: 2px;
           color: #969495;
           font-weight: 550;
+        }
+      }
+
+      .language-vi {
+        cursor: pointer;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .language-en {
+        margin: 0 10px;
+        cursor: pointer;
+        img {
+          width: 20px;
+          height: 20px;
         }
       }
     }
@@ -72,8 +96,7 @@
 
   .content-up {
     padding-top: 15px;
-    border: 1px solid red;
-    height: 50%;
+    height: 65%;
     .first-title {
       text-align: center;
       font-size: 30px;
@@ -116,8 +139,15 @@
   }
 
   .content-down {
-    border: 1px solid black;
-    height: 50%;
+    height: 35%;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, -0.9),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 1)
+    );
     .option {
       justify-content: center;
       display: flex;
@@ -129,7 +159,6 @@
 
         .speciality {
           width: 125px;
-          border: 1px solid red;
           cursor: pointer;
           &:hover {
             color: #119db6;
@@ -155,7 +184,6 @@
 
         .remote {
           width: 125px;
-          border: 1px solid red;
           cursor: pointer;
           &:hover {
             color: #119db6;
@@ -181,7 +209,6 @@
 
         .general {
           width: 125px;
-          border: 1px solid red;
           cursor: pointer;
           &:hover {
             color: #119db6;
@@ -207,7 +234,6 @@
 
         .medical {
           width: 125px;
-          border: 1px solid red;
           cursor: pointer;
           &:hover {
             color: #119db6;
@@ -233,7 +259,6 @@
 
         .health {
           width: 125px;
-          border: 1px solid red;
           cursor: pointer;
           &:hover {
             color: #119db6;
@@ -259,7 +284,6 @@
 
         .dentistry {
           width: 125px;
-          border: 1px solid red;
           cursor: pointer;
           &:hover {
             color: #119db6;

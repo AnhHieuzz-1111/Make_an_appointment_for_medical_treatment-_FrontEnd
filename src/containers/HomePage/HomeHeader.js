@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./HomeHeader.scss";
+import logoVietnamese from "../../assets/images/vietnamese.svg";
+import logoEngland from "../../assets/images/england.svg";
+import { FormattedMessage } from 'react-intl';
 
 class HomeHeader extends Component {
   render() {
@@ -15,45 +18,46 @@ class HomeHeader extends Component {
             <div className="center-content">
               <div className="child-content">
                 <div>
-                  <b>Chuyên khoa</b>
+                  <b><FormattedMessage id="homeheader.specialty"/></b>
                 </div>
-                <div className="subs-title">Tìm bác sĩ theo chuyên khoa</div>
+                <div className="subs-title"><FormattedMessage id="homeheader.searchdoctor"/></div>
               </div>
               <div className="child-content">
                 <div>
-                  <b>Cơ sở y tế</b>
+                  <b><FormattedMessage id="homeheader.health-facility"/></b>
                 </div>
-                <div className="subs-title">Chọn bệnh viện phòng khám</div>
+                <div className="subs-title"><FormattedMessage id="homeheader.select-clinic-hospital"/></div>
               </div>
               <div className="child-content">
                 <div>
-                  <b>Bác sĩ</b>
+                  <b><FormattedMessage id="homeheader.doctor"/></b>
                 </div>
-                <div className="subs-title">Chọn bác sĩ giỏi</div>
+                <div className="subs-title"><FormattedMessage id="homeheader.select-good-doctor"/></div>
               </div>
               <div className="child-content">
                 <div>
-                  <b>Gói khám</b>
+                  <b><FormattedMessage id="homeheader.examination-package"/></b>
                 </div>
-                <div className="subs-title">Khám sức khỏe tổng quát</div>
+                <div className="subs-title"><FormattedMessage id="homeheader.examine-general-health"/></div>
               </div>
             </div>
             <div className="right-content">
               <div className="support">
                 <i className="fas fa-question-circle"></i>
-                <span>Hỗ trợ</span>
+                <span><FormattedMessage id="homeheader.support"/></span>
               </div>
-              <div className="flag">VN</div>
+              <div className="language-vi"><img src={logoVietnamese}/></div>
+              <div className="language-en"><img src={logoEngland}/></div>
             </div>
           </div>
         </div>
         <div className="home-header-banner">
           <div className="content-up">
-            <div className="first-title">NỀN TẢNG Y TẾ</div>
-            <div className="second-title">CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
+            <div className="first-title"><FormattedMessage id="banner.medical-foundation"/></div>
+            <div className="second-title"><FormattedMessage id="banner.comprehensive-health-care"/></div>
             <div className="search">
               <i class="fas fa-search"></i>
-              <input type="text" placeholder="Tìm bệnh viên" />
+              <input type="text" placeholder="Tìm kiếm thông tin ..." />
             </div>
           </div>
           <div className="content-down">
@@ -61,27 +65,27 @@ class HomeHeader extends Component {
               <div className="option-child">
                 <div className="speciality">
                   <div className="icon-speciality"></div>
-                  <div className="text-speciality">Khám chuyên khoa</div>
+                  <div className="text-speciality"><FormattedMessage id="banner.specialist-examination"/></div>
                 </div>
                 <div className="remote">
                   <div className="icon-remote"></div>
-                  <div className="text-remote">Khám từ xa</div>
+                  <div className="text-remote"><FormattedMessage id="banner.remote-examination"/></div>
                 </div>
                 <div className="general">
                   <div className="icon-general"></div>
-                  <div className="text-general">Khám tổng quát</div>
+                  <div className="text-general"><FormattedMessage id="banner.general-examination"/></div>
                 </div>
                 <div className="medical">
                   <div className="icon-medical"></div>
-                  <div className="text-medical">Xét nghiệm y học</div>
+                  <div className="text-medical"><FormattedMessage id="banner.medical-test"/></div>
                 </div>
                 <div className="health">
                   <div className="icon-health"></div>
-                  <div className="text-health">Sức khỏe tinh thần</div>
+                  <div className="text-health"><FormattedMessage id="banner.mental-health"/></div>
                 </div>
                 <div className="dentistry">
                   <div className="icon-dentistry"></div>
-                  <div className="text-dentistry">Khám nha khoa</div>
+                  <div className="text-dentistry"><FormattedMessage id="banner.dentistry-examination"/></div>
                 </div>
               </div>
             </div>
@@ -95,6 +99,7 @@ class HomeHeader extends Component {
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    language: state.app.language,
   };
 };
 
