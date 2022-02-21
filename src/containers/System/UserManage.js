@@ -130,7 +130,7 @@ class UserManage extends Component {
             editUser={this.doEditUser}
           />
         )}
-        <div className="title text-center mt-4">Manage users with Anh Hieu</div>
+        <div className="title text-center mt-4">Manage users</div>
         <div className="mx-1-">
           <button
             className="btn btn-primary px-3 mx-2"
