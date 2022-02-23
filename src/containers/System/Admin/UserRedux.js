@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import { getALlCodeService } from "../../../services/userService";
 import { LANGUAGES } from "../../../utils/constant";
+import * as actions from "../../../store/actions";
 
 class UserRedux extends Component {
   constructor(props) {
@@ -12,25 +13,38 @@ class UserRedux extends Component {
     };
   }
 
-  componentDidMount() {
-    try {
-      return new Promise(async () => {
-        let res = await getALlCodeService("gender");
-        console.log("check res: ", res.data);
-        if (res && res.errCode === 0) {
-          this.setState({
-            genderArr: res.data,
-          });
-        }
+  async componentDidMount() {
+    // this.props.dispatch(actions.fetchGenderStart());
+    this.props.getGenderStart();
+
+    // try {
+    //   return new Promise(async () => {
+    //     let res = await getALlCodeService("gender");
+    //     if (res && res.errCode === 0) {
+    //       this.setState({
+    //         genderArr: res.data,
+    //       });
+    //     }
+    //   });
+    // } catch (e) {
+    //   console.log(e);
+    // }
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    // => render => componentDidUpdate
+    // compare with current(this) = [] and last(prev) = [3]
+    if (prevProps.genderRedux !== this.props.genderRedux) {
+      this.setState({
+        genderArr: this.props.genderRedux,
       });
-    } catch (e) {
-      console.log(e);
     }
   }
 
   render() {
     let genders = this.state.genderArr;
     let language = this.props.language;
+    console.log("check props from redux: ", this.props.genderRedux);
     return (
       <div className="user-redux-container">
         <div className="title">
@@ -40,76 +54,84 @@ class UserRedux extends Component {
           <div className="container">
             <div className="from-row">
               <form>
-                <div class="row">
+                <div className="row">
                   <div className="col-12 my-2">
                     <h5>
                       <FormattedMessage id="manage-user.add" />
                     </h5>
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">
+                  <div className="form-group col-md-6">
+                    <label htmlFor="inputEmail4">
                       <FormattedMessage id="manage-user.email" />
                     </label>
-                    <input type="email" class="form-control" id="inputEmail4" />
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="inputEmail4"
+                    />
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputPassword4">
+                  <div className="form-group col-md-6">
+                    <label htmlFor="inputPassword4">
                       <FormattedMessage id="manage-user.password" />
                     </label>
                     <input
                       type="password"
-                      class="form-control"
+                      className="form-control"
                       id="inputPassword4"
                     />
                   </div>
                 </div>
                 <div className="row">
-                  <div class="form-group col-md-6">
-                    <label for="inputAddress">
+                  <div className="form-group col-md-6">
+                    <label htmlFor="inputAddress">
                       <FormattedMessage id="manage-user.first-name" />
                     </label>
-                    <input type="text" class="form-control" id="inputAddress" />
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="inputAddress"
+                    />
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputAddress2">
+                  <div className="form-group col-md-6">
+                    <label htmlFor="inputAddress2">
                       <FormattedMessage id="manage-user.last-name" />
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="inputAddress2"
                     />
                   </div>
                 </div>
 
                 <div className="row">
-                  <div class="form-group col-md-12">
-                    <label for="inputAddress2">
+                  <div className="form-group col-md-12">
+                    <label htmlFor="inputAddress2">
                       <FormattedMessage id="manage-user.address" />
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="inputAddress2"
                     />
                   </div>
                 </div>
-                <div class="row">
-                  <div class="form-group col-md-3">
-                    <label for="inputAddress2">
+                <div className="row">
+                  <div className="form-group col-md-3">
+                    <label htmlFor="inputAddress2">
                       <FormattedMessage id="manage-user.phone-number" />
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="inputAddress2"
                     />
                   </div>
-                  <div class="form-group col-md-3">
-                    <label for="inputState">
+                  <div className="form-group col-md-3">
+                    <label htmlFor="inputState">
                       <FormattedMessage id="manage-user.gender" />
                     </label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" className="form-control">
                       {genders &&
                         genders.length > 0 &&
                         genders.map((item, index) => {
@@ -123,34 +145,32 @@ class UserRedux extends Component {
                         })}
                     </select>
                   </div>
-                  <div class="form-group col-md-3">
-                    <label for="inputState">
+                  <div className="form-group col-md-3">
+                    <label htmlFor="inputState">
                       <FormattedMessage id="manage-user.position" />
                     </label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Choose...</option>
+                    <select id="inputState" className="form-control">
                       <option>...</option>
                     </select>
                   </div>
-                  <div class="form-group col-md-3">
-                    <label for="inputState">
+                  <div className="form-group col-md-3">
+                    <label htmlFor="inputState">
                       <FormattedMessage id="manage-user.role" />
                     </label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Choose...</option>
+                    <select id="inputState" className="form-control">
                       <option>...</option>
                     </select>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="inputState">
+                <div className="form-group">
+                  <label htmlFor="inputState">
                     <FormattedMessage id="manage-user.image" />
                   </label>
                   <input className="form-control" type="text" />
                 </div>
                 <button
                   type="submit"
-                  class="btn btn-primary mt-3"
+                  className="btn btn-primary mt-3"
                   style={{ width: 55 }}
                 >
                   <FormattedMessage id="manage-user.save" />
@@ -167,11 +187,16 @@ class UserRedux extends Component {
 const mapStateToProps = (state) => {
   return {
     language: state.app.language,
+    genderRedux: state.admin.genders,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    getGenderStart: () => dispatch(actions.fetchGenderStart()),
+    // processLogout: () => dispatch(actions.processLogout()),
+    // changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language)),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserRedux);
