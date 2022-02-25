@@ -1,21 +1,34 @@
-.preview-img-container {
+.user-redux-container {
+    line-height: 1.0 !important;
+  .preview-img-container {
     display: flex;
     .upload-file {
-        padding: 5px;
-        border-radius: 3px;
-        background: #ddd;
-        cursor: pointer;
-        height: 32px;
-        margin-right: 20px;
-        &:hover {
-            background: rgb(158, 157, 157);
-        }
+      padding: 5px;
+      border-radius: 3px;
+      background: #ddd;
+      cursor: pointer;
+      height: 32px;
+      margin-right: 20px;
+      line-height: 25px;
+      &:hover {
+        background: rgb(158, 157, 157);
+      }
     }
     .preview-image {
-        width: 120px;
-        height: 60px;
-        background: center center no-repeat;
-        background-size: contain;
-        cursor: pointer;
+      width: 120px;
+      height: 60px;
+      background: center center no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+  
+  .image-save {
+      display: flex;
+      justify-content: space-between;
+
+      .image-save-right {
+          margin-top: 10px;
+      }
     }
 }
