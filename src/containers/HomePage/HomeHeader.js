@@ -62,7 +62,7 @@ class HomeHeader extends Component {
             <div className="first-title"><FormattedMessage id="banner.medical-foundation"/></div>
             <div className="second-title"><FormattedMessage id="banner.comprehensive-health-care"/></div>
             <div className="search">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
               <input type="text" placeholder="Tìm kiếm thông tin ..." />
             </div>
           </div>

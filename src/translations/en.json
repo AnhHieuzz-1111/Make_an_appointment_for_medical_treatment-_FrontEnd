@@ -51,5 +51,9 @@
         "save": "Add",
         "edit": "Upadte",
         "upload": "Upload  "
+    },
+    "home-page": {
+        "outstanding-doctor": "Last week's outstanding doctor",
+        "further": "Further"
     }
 }

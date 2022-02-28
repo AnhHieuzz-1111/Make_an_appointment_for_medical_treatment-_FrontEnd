@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Slider from "react-slick";
 import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils/constant";
+import { FormattedMessage } from "react-intl";
 class OutstandingDoctor extends Component {
   constructor(props) {
     super(props);
@@ -28,15 +29,15 @@ class OutstandingDoctor extends Component {
   render() {
     let allDoctors = this.state.doctorsArr;
     let { language } = this.props;
-    allDoctors = allDoctors.concat(allDoctors).concat(allDoctors);
-    console.log("all doctors: ", allDoctors);
+    // allDoctors = allDoctors.concat(allDoctors).concat(allDoctors);
+    // console.log("all doctors: ", allDoctors);
     return (
       <div className="section-share section-outstanding-doctor">
         <div className="section-container">
           <div className="section-header">
-            <h2>Bác sĩ nổi bật tuần qua</h2>
+            <h2><FormattedMessage id="home-page.outstanding-doctor"/></h2>
             <div className="further">
-              <button>Tìm kiếm</button>
+              <button><FormattedMessage id="home-page.further"/></button>
             </div>
           </div>
           <div className="section-body">
@@ -51,7 +52,7 @@ class OutstandingDoctor extends Component {
                   let nameVi = `${item.positionData.valueVi} || ${item.lastName}  ${item.firstName}`;
                   let nameEn = `${item.positionData.valueEn} ||  ${item.lastName} ${item.firstName}`;
                   return (
-                    <div className="section-customize" key={index}>
+                    <div className="section-customize" style={{width: 290}} key={index}>
                       <div className="customize-border">
                         <div className="outer-bg">
                           <div className="bg-image section-outstanding-doctor" 

@@ -228,7 +228,7 @@ export const editUserFailed = () => ({
 export const fetchOutStandingDoctor = (data) => {
   return async (dispatch, getState) => {
     try {
-      let res = await getOutStandingDoctorService(5);
+      let res = await getOutStandingDoctorService(7);
       if (res && res.errCode === 0) {
         dispatch({
           type: actionTypes.FETCH_OUTSTANDING_DOCTOR_SUCCESS,

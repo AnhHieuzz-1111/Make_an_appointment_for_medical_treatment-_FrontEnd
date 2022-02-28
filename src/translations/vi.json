@@ -51,5 +51,9 @@
         "save": "Thêm",
         "edit": "Cập nhật",
         "upload": "Tải ảnh  "
+    },
+    "home-page": {
+        "outstanding-doctor": "Bác sĩ nổi bật tuần qua",
+        "further": "Xem thêm"
     }
 }

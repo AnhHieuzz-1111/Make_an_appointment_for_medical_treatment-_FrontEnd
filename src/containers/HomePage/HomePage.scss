@@ -28,6 +28,10 @@
   }
 }
 
+.slick-disabled {
+  display: none !important;
+}
+
 .slick-prev::before,
 .slick-next::before {
   font-size: 25px !important;
@@ -50,6 +54,14 @@
 
   .section-body {
     .section-customize {
+      display: inline-block !important;
+      width: 94% !important;
+      cursor: pointer;
+      &:hover {
+        h3 {
+          color: #69d2eb;
+        }
+      }
       h3,
       h4 {
         color: #111;
@@ -59,9 +71,6 @@
         font-family: "Open Sans", sans-serif;
         padding-bottom: 0;
         cursor: pointer;
-        &:hover {
-          color: #69d2eb;
-        }
       }
       h4 {
         font-size: 11px;
@@ -232,9 +241,7 @@
   }
 }
 
-.slick-slider {
-  width: 1181px;
-}
+
 
 .section-share {
   height: 330px;
@@ -349,4 +356,8 @@
       }
     }
   }
+}
+
+.slick-slider {
+  width: 1181px;
 }
