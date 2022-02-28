@@ -6,6 +6,8 @@ import {
   createNewUserService,
   getAllUsers,
   deleteUserService,
+  editUserService,
+  getOutStandingDoctorService,
 } from "../../services/userService";
 
 // export const fetchGenderStart = () => ({
@@ -99,7 +101,7 @@ export const createNewUser = (data) => {
       if (res && res.errCode === 0) {
         dispatch(saveUserSuccess());
         dispatch(fetchAllUserStart());
-        toast.success('🦄 Add a new user succeed!', {
+        toast.success("🦄 Add a new user succeed!", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -107,7 +109,7 @@ export const createNewUser = (data) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          });
+        });
       } else {
         dispatch(saveUserFailed());
       }
@@ -160,7 +162,7 @@ export const deleteUser = (userId) => {
       if (res && res.errCode === 0) {
         dispatch(deleteUserSuccess());
         dispatch(fetchAllUserStart());
-        toast.error('🦄 Delete a new user succeed!', {
+        toast.error("🦄 Delete a new user succeed!", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -168,7 +170,7 @@ export const deleteUser = (userId) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          });
+        });
       } else {
         dispatch(deleteUserFailed());
       }
@@ -186,3 +188,62 @@ export const deleteUserSuccess = () => ({
 export const deleteUserFailed = () => ({
   type: actionTypes.DELETE_USER_FAILED,
 });
+
+//edit user
+export const editUser = (data) => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await editUserService(data);
+      if (res && res.errCode === 0) {
+        dispatch(editUserSuccess());
+        dispatch(fetchAllUserStart());
+        toast.warn("🦄 Update a new user succeed!", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else {
+        dispatch(editUserFailed());
+      }
+    } catch (e) {
+      dispatch(editUserFailed());
+      console.log("editUser error: ", e);
+    }
+  };
+};
+
+export const editUserSuccess = () => ({
+  type: actionTypes.EDIT_USER_SUCCESS,
+});
+
+export const editUserFailed = () => ({
+  type: actionTypes.EDIT_USER_FAILED,
+});
+
+//doctor
+export const fetchOutStandingDoctor = (data) => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getOutStandingDoctorService(5);
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.FETCH_OUTSTANDING_DOCTOR_SUCCESS,
+          dataDoctors: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.FETCH_OUTSTANDING_DOCTOR_FAILED,
+        });
+      }
+    } catch (e) {
+      console.log("fetchOutStandingDoctor error: ", e);
+      dispatch({
+        type: actionTypes.FETCH_OUTSTANDING_DOCTOR_FAILED,
+      });
+    }
+  };
+};

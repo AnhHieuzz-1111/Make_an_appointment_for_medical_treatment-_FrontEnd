@@ -4,7 +4,7 @@
   padding: 0 20px;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: #eee;
   z-index: 100000;
 
   .home-header-content {
@@ -42,6 +42,7 @@
         b {
           display: block;
           font-size: 12px;
+          color: #49bce2;
         }
         .subs-title {
           font-weight: lighter;
@@ -91,7 +92,7 @@
 .home-header-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../../assets/header-background.jpg");
-  height: 486px;
+  height: 595px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

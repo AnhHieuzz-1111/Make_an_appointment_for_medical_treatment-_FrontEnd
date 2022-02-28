@@ -28,6 +28,10 @@ const getALlCodeService = (inputType) => {
   return axios.get(`/api/allcode?type=${inputType}`);
 };
 
+const getOutStandingDoctorService = (limit) => {
+  return axios.get(`/api/get-outstanding-doctor?limit=${limit}`)
+} 
+
 export {
   handleLoginApi,
   getAllUsers,
@@ -35,4 +39,5 @@ export {
   deleteUserService,
   editUserService,
   getALlCodeService,
+  getOutStandingDoctorService
 };
