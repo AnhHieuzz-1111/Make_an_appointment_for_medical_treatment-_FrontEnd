@@ -29,8 +29,20 @@ const getALlCodeService = (inputType) => {
 };
 
 const getOutStandingDoctorService = (limit) => {
-  return axios.get(`/api/get-outstanding-doctor?limit=${limit}`)
-} 
+  return axios.get(`/api/get-outstanding-doctor?limit=${limit}`);
+};
+
+const getAllDoctors = () => {
+  return axios.get(`/api/get-all-doctors`);
+};
+
+const createDetailInfoDoctor = (data) => {
+  return axios.post('/api/save-info-doctor', data);
+};
+
+const getDetailInfoDoctor = (doctorId) => {
+  return axios.get(`/api/get-detail-doctor-by-id?id=${doctorId}`);
+}
 
 export {
   handleLoginApi,
@@ -39,5 +51,8 @@ export {
   deleteUserService,
   editUserService,
   getALlCodeService,
-  getOutStandingDoctorService
+  getOutStandingDoctorService,
+  getAllDoctors,
+  createDetailInfoDoctor,
+  getDetailInfoDoctor,
 };

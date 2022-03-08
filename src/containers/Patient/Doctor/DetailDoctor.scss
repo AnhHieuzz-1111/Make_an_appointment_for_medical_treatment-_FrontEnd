@@ -1,0 +1,90 @@
+.doctor-detail-container {
+  .doctor-detail-cover {
+    width: 1222px;
+    margin: auto;
+
+    .position-current {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #45c3d2;
+
+      .current-right::before {
+        content: " / ";
+        color: #ccc;
+        padding: 0 5px;
+      }
+
+      .current-left::before {
+        content: " / ";
+        color: #ccc;
+        padding: 0 5px;
+      }
+    }
+
+    .doctor-intro {
+      display: flex;
+      padding-top: 15px;
+
+      .img-doctor {
+        width: 15%;
+        border: 1px solid;
+      }
+      .img-doctor {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: none;
+        margin-right: 15px;
+      }
+
+      .intro-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .up {
+          font-size: 23px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          line-height: 1.2;
+          margin: 0px;
+          padding: 0px;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: #333;
+          outline: none;
+        }
+        .down {
+          color: #555;
+          font-size: 13px;
+        }
+        .doctor-fb {
+          .icon-like {
+            background-color: #1877f2;
+            color: white;
+            height: 20px;
+            line-height: 20px;
+            display: flex;
+            justify-content: center;
+            width: 15%;
+            border-radius: 4px;
+          }
+          .fa-thumbs-up::before {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    .doctor-detail-info {
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+  }
+}

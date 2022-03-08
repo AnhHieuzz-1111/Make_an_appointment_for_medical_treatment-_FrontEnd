@@ -8,6 +8,8 @@ import {
   deleteUserService,
   editUserService,
   getOutStandingDoctorService,
+  getAllDoctors,
+  createDetailInfoDoctor,
 } from "../../services/userService";
 
 // export const fetchGenderStart = () => ({
@@ -243,6 +245,80 @@ export const fetchOutStandingDoctor = (data) => {
       console.log("fetchOutStandingDoctor error: ", e);
       dispatch({
         type: actionTypes.FETCH_OUTSTANDING_DOCTOR_FAILED,
+      });
+    }
+  };
+};
+
+//selector doctors
+export const fetchAllDoctors = (data) => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getAllDoctors();
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
+          dataAllDoctors: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+        });
+      }
+    } catch (e) {
+      console.log("fetchAllDoctors error: ", e);
+      dispatch({
+        type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+      });
+    }
+  };
+};
+
+//save info doctor
+export const createDetailDoctor = (data) => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await createDetailInfoDoctor(data);
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.CREATE_DETAIL_INFO_DOCTOR_SUCCESS,
+        });
+        toast.success("🦄 Create info detail doctor succeed!", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.CREATE_DETAIL_INFO_DOCTOR_FAILED,
+        });
+        toast.error("🦄 Create info detail doctor Error!", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    } catch (e) {
+      console.log("createDetailDoctor error: ", e);
+      dispatch({
+        type: actionTypes.CREATE_DETAIL_INFO_DOCTOR_FAILED,
+      });
+      toast.error("🦄 Create info detail doctor Error!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
     }
   };
