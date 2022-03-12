@@ -1,59 +1,62 @@
 {
-    "homeheader": {
-        "specialty" : "Chuyên khoa",
-        "searchdoctor" : "Tìm kiếm bác sĩ theo chuyên khoa",
-        "health-facility" : "Cơ sở y tế",
-        "select-clinic-hospital" : "Chọn bệnh viện phòng khám",
-        "doctor" : "Bác sĩ",
-        "select-good-doctor" : "Chọn bác sĩ giỏi",
-        "examination-package" : "Gói khám",
-        "examine-general-health": "Khám sức khỏe tổng quát",
-        "support" : "Hỗ trợ",
-        "welcome" : "Xin chào"
+  "homeheader": {
+    "specialty": "Chuyên khoa",
+    "searchdoctor": "Tìm kiếm bác sĩ theo chuyên khoa",
+    "health-facility": "Cơ sở y tế",
+    "select-clinic-hospital": "Chọn bệnh viện phòng khám",
+    "doctor": "Bác sĩ",
+    "select-good-doctor": "Chọn bác sĩ giỏi",
+    "examination-package": "Gói khám",
+    "examine-general-health": "Khám sức khỏe tổng quát",
+    "support": "Hỗ trợ",
+    "welcome": "Xin chào"
+  },
+  "banner": {
+    "medical-foundation": "NỀN TẢNG Y TẾ",
+    "comprehensive-health-care": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+    "specialist-examination": "Khám chuyên khoa",
+    "remote-examination": "Khám từ xa",
+    "general-examination": "Khám tổng quát",
+    "medical-test": "Xét nghiệm y học",
+    "mental-health": "Sức khỏe tinh thần",
+    "dentistry-examination": "Khám nha khoa"
+  },
+  "menu": {
+    "admin": {
+      "manage-user": "Người dùng",
+      "manage-doctor": "Quản lý bác sĩ",
+      "manage-admin": "Quản lý admin",
+      "crud": "CRUD user",
+      "crud-redux": "CRUD redux",
+      "clinic": "Phòng khám",
+      "manage-clinic": "Quản lý phòng khám",
+      "speciality": "Chuyên khoa",
+      "manage-speciality": "Quản lý chuyên khoa",
+      "handbook": "Cẩm nang",
+      "manage-handbook": "Quản lý cẩm nang"
     },
-    "banner": {
-        "medical-foundation" : "NỀN TẢNG Y TẾ",
-        "comprehensive-health-care" : "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
-        "specialist-examination" : "Khám chuyên khoa",
-        "remote-examination" : "Khám từ xa",
-        "general-examination" : "Khám tổng quát",
-        "medical-test" : "Xét nghiệm y học",
-        "mental-health" : "Sức khỏe tinh thần",
-        "dentistry-examination" : "Khám nha khoa"
-    },
-    "menu": {
-        "admin": {
-            "manage-user": "Người dùng",
-            "manage-doctor": "Quản lý bác sĩ",
-            "manage-admin": "Quản lý admin",
-            "crud": "CRUD user",
-            "crud-redux": "CRUD redux",
-            "clinic": "Phòng khám",
-            "manage-clinic": "Quản lý phòng khám",
-            "speciality": "Chuyên khoa",
-            "manage-speciality": "Quản lý chuyên khoa",
-            "handbook": "Cẩm nang",
-            "manage-handbook": "Quản lý cẩm nang"
-        }
-    },
-    "manage-user": {
-        "add": "Thêm mới người dùng",
-        "email": "Email",
-        "password": "Mật khẩu",
-        "first-name": "Tên",
-        "last-name": "Họ",
-        "phone-number": "Số điện thoại",
-        "address": "Địa chỉ",
-        "gender": "Giới tính",
-        "position": "Chức danh",
-        "role": "Vai trò",
-        "image": "Ảnh đại diện",
-        "save": "Thêm",
-        "edit": "Cập nhật",
-        "upload": "Tải ảnh  "
-    },
-    "home-page": {
-        "outstanding-doctor": "Bác sĩ nổi bật tuần qua",
-        "further": "Xem thêm"
+    "doctor": {
+      "manage-schedule": "Quản lý kế hoạch khám bệnh"
     }
+  },
+  "manage-user": {
+    "add": "Thêm mới người dùng",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "first-name": "Tên",
+    "last-name": "Họ",
+    "phone-number": "Số điện thoại",
+    "address": "Địa chỉ",
+    "gender": "Giới tính",
+    "position": "Chức danh",
+    "role": "Vai trò",
+    "image": "Ảnh đại diện",
+    "save": "Thêm",
+    "edit": "Cập nhật",
+    "upload": "Tải ảnh  "
+  },
+  "home-page": {
+    "outstanding-doctor": "Bác sĩ nổi bật tuần qua",
+    "further": "Xem thêm"
+  }
 }
