@@ -15,10 +15,13 @@
     flex-wrap: wrap;
     margin: 20px 0;
     .btn-schedule {
-      border: 1px solid grey;
+      border: 1px solid #ffc107;
       height: 35px;
       line-height: 35px;
       padding: 0px 5px;
+      &.active {
+        background-color: #ffc107;
+      }
     }
   }
   .btn-save-schedule {
