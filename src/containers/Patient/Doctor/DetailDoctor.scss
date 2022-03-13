@@ -80,7 +80,17 @@
       }
     }
     .doctor-schedule {
-      
+      margin: 40px 0 15px 0;
+      display: flex;
+      height: 200px;
+      border: 1px solid red;
+
+      .content-left {
+        width: 50%;
+      }
+      .content-right {
+        width: 50%;
+      }
     }
   }
   .doctor-detail-cover-2 {
