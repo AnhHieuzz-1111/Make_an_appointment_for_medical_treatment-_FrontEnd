@@ -2,7 +2,7 @@
   .doctor-detail-cover {
     width: 1222px;
     margin: auto;
-
+    margin-bottom: 30px;
     .position-current {
       display: flex;
       gap: 10px;
@@ -21,7 +21,6 @@
         padding: 0 5px;
       }
     }
-
     .doctor-intro {
       display: flex;
       padding-top: 15px;
@@ -80,11 +79,26 @@
         }
       }
     }
-
-    .doctor-detail-info {
-      border-top: 1px solid #ccc;
-      padding-top: 15px;
-      margin-top: 15px;
+    .doctor-schedule {
+      
+    }
+  }
+  .doctor-detail-cover-2 {
+    background: #f9f9f9;
+    border-top: 1px solid #ccc;
+    .futher-review-doctor {
+      width: 1222px;
+      margin: auto;
+      .doctor-detail-info {
+        padding-top: 15px;
+        margin-top: 15px;
+        p {
+          s {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
     }
   }
 }

@@ -32,6 +32,28 @@
     outline: none;
     border: none;
     cursor: pointer;
+    background: #ffc107;
+    color: #fff;
+    float: right;
+    height: 40px;
+    line-height: 35px;
+    text-decoration: none;
+    border: 2px solid white;
+    &:hover {
+      border-radius: 3px;
+      background: #ffc107;
+      border: 2px solid #d8d8d8;
+    }
+  }
+  
+  .create-content-doctor {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     background: #04aa6d;
     color: #fff;
     float: right;
