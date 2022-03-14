@@ -64,6 +64,7 @@
         }
         .doctor-fb {
           .icon-like {
+            cursor: pointer;
             background-color: #1877f2;
             color: white;
             height: 20px;
@@ -82,8 +83,7 @@
     .doctor-schedule {
       margin: 40px 0 15px 0;
       display: flex;
-      height: 200px;
-      border: 1px solid red;
+      min-height: 200px;
 
       .content-left {
         width: 50%;
