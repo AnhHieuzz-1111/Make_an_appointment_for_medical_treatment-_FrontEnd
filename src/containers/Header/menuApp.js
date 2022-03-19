@@ -21,7 +21,7 @@ export const adminMenu = [
       },
       {
         //quản lý kế hoạch bác sĩ
-        name: "menu.doctor.schedule",
+        name: "menu.doctor.manage-schedule",
         link: "/doctor/manage-schedule",
       },
     ],

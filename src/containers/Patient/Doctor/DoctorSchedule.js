@@ -7,7 +7,7 @@ import { LANGUAGES } from "../../../utils/constant";
 import { getScheduleDoctorByDate } from "../../../services/userService";
 import { FormattedMessage } from "react-intl";
 
-class DetailDoctor extends Component {
+class DoctorSchedule extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -178,4 +178,4 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailDoctor);
+export default connect(mapStateToProps, mapDispatchToProps)(DoctorSchedule);
