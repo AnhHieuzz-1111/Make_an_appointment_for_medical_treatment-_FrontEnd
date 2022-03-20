@@ -228,8 +228,8 @@ class ManageDoctor extends Component {
         <div className="manage-doctor-title">
           <FormattedMessage id="admin.manage-doctor.title" />
         </div>
-        <div className="futher">
-          <div className="content-left form-group">
+        <div className="futher row">
+          <div className="content-left col-4 form-group">
             <label htmlFor="doctors">
               <FormattedMessage id="admin.manage-doctor.select-doctor" />
             </label>
@@ -242,7 +242,7 @@ class ManageDoctor extends Component {
               }
             />
           </div>
-          <div className="content-right form-group">
+          <div className="content-right col-8 form-group">
             <label htmlFor="description-doctor">
               <FormattedMessage id="admin.manage-doctor.intro" />
             </label>

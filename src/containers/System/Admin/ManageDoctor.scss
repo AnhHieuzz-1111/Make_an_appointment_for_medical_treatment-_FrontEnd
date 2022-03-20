@@ -12,16 +12,14 @@
     display: flex;
     justify-content: space-between;
     .content-left {
-      width: 25%;
       label {
-          color: #5a5a5a;
+        color: #5a5a5a;
       }
     }
     .content-right {
-      width: 30%;
       label {
         color: #5a5a5a;
-    }
+      }
     }
   }
   .save-content-doctor {
@@ -45,7 +43,7 @@
       border: 2px solid #d8d8d8;
     }
   }
-  
+
   .create-content-doctor {
     margin-top: 10px;
     margin-bottom: 30px;
